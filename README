@@ -1,0 +1,84 @@
+# System Monitoring Dashboard Script
+
+This script provides a real-time dashboard for monitoring various system resources. It refreshes the data every few seconds and allows users to call specific parts of the dashboard individually using command-line switches.
+
+## Features
+
+1. **Top 10 Most Used Applications**
+   - Displays the top 10 applications consuming the most CPU and memory.
+
+2. **Network Monitoring**
+   - Number of concurrent connections to the server.
+   - Packet drops.
+   - Number of MB in and out.
+
+3. **Disk Usage**
+   - Displays the disk space usage by mounted partitions.
+   - Highlights partitions using more than 80% of the space.
+
+4. **System Load**
+   - Shows the current load average for the system.
+   - Includes a breakdown of CPU usage (user, system, idle, etc.).
+
+5. **Memory Usage**
+   - Displays total, used, and free memory.
+   - Swap memory usage.
+
+6. **Process Monitoring**
+   - Displays the number of active processes.
+   - Shows top 5 processes in terms of CPU and memory usage.
+
+7. **Service Monitoring**
+   - Monitors the status of essential services like sshd, nginx/apache, iptables, etc.
+
+8. **Custom Dashboard**
+   - Provides command-line switches to view specific parts of the dashboard, e.g., `-cpu`, `-memory`, `-network`, etc.
+
+## Usage
+
+### Running the Full Dashboard
+
+To run the full dashboard, execute the script without any arguments:
+
+```bash
+./monitor.sh
+
+
+
+## Viewing Specific Parts of the Dashboard ##
+
+You can view specific parts of the dashboard using the following command-line switches:
+
+CPU and Memory Usage of Top Applications:
+./monitor.sh -cpu
+
+Network Monitoring:
+./monitor.sh -network
+
+Disk Usage:
+./monitor.sh -disk
+
+System Load:
+./monitor.sh -load
+
+Memory Usage:
+./monitor.sh -memory
+
+Process Monitoring:
+./monitor.sh -process
+
+Service Monitoring:
+./monitor.sh -service
+
+## Customization and Extension
+The script is designed to be easily customizable and extendable. You can add more monitoring functions or modify existing ones to suit your needs. For example, you can add a function to monitor additional services or include more detailed network statistics.
+
+## Evaluation Criteria
+Correctness and Completeness: The script should accurately monitor and display the specified system resources.
+Efficiency and Performance: The script should efficiently update the data in real-time without causing significant system load.
+Usability and Documentation: The script should be easy to use, and the README should provide clear instructions and examples.
+Customizability: The script should be easy to customize and extend for additional monitoring requirements.
+
+## License
+This script is released under the MIT License. Feel free to use, modify, and distribute it as needed.
+
